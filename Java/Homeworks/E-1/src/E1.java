@@ -8,5 +8,6 @@ public class E1 {
         Student andie = new Student("Andie Walsh", "Illinois", chicagoHigh);
         System.out.print(glenBrookNorthHighSchool);
         System.out.print(chicagoHigh);
+        
     }
 }

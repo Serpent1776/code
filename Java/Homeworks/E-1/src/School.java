@@ -22,8 +22,11 @@ public class School {
     public void addRoster(Student e) {
         roster.add(e);
     }
-    public boolean equals(School a) {
-        return this.schoolName.equals(a.getName()) && this.roster.equals(a.getRoster());
+    public Person getPrincipal() {
+        return principal;
+    }
+    public String getState() {
+        return state;
     }
     @Override
     public String toString() {
@@ -34,5 +37,8 @@ public class School {
         }
 
         return schoolData;
+    }
+    public boolean equals(School otherSchool) {
+        return this.schoolName.equals(otherSchool.getName()) && this.state.equals(otherSchool.getState()) && this.principal.equals(otherSchool.getPrincipal());
     }
 }
