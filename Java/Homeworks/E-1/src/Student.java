@@ -12,7 +12,7 @@ public class Student extends Person {
     }
     @Override 
     public String toString() {
-        return super.toString() + "\nStudent School is" + school;
+        return super.toString() + ", School: " + school.getName();
     }
     public boolean equals(Student two) {
         return super.equals(two) && this.school.equals(two.getSchool());

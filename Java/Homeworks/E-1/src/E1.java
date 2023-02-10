@@ -6,8 +6,13 @@ public class E1 {
         School chicagoHigh = new School("Chicago High School", "chicago", chicagoHighPrincipal);
         Student ferris = new Student("Ferris Bueller", "Illinois", glenBrookNorthHighSchool);
         Student andie = new Student("Andie Walsh", "Illinois", chicagoHigh);
-        System.out.print(glenBrookNorthHighSchool);
-        System.out.print(chicagoHigh);
+        System.out.println(glenBrookNorthHighSchool);
+        System.out.println(edRooney);
+        System.out.println(ferris);
+        System.out.println(chicagoHigh);
+        System.out.println(chicagoHighPrincipal);
+        System.out.println(andie);
+        
         
     }
 }

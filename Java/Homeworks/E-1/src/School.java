@@ -30,10 +30,10 @@ public class School {
     }
     @Override
     public String toString() {
-        String schoolData = "This school's name is " + schoolName + " and is in " + state + ". Its principal is " + principal + ".";
-        schoolData += "\nStudents that attend this school are:\n";
+        String schoolData = "This school's name is " + schoolName + " and is in " + state + ". Its principal is " + principal.getName() + ".";
+        schoolData += "\nStudents that attend this school are:";
         for(int i = 0; i < roster.size(); i++) {
-            schoolData += roster.get(i).getName() + "\n";
+            schoolData += "\n" + roster.get(i).getName();
         }
 
         return schoolData;
