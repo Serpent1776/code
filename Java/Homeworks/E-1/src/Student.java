@@ -5,6 +5,7 @@ public class Student extends Person {
     public Student(String name, String citizenship, School school) {
         super(name, citizenship);
         this.school = school;
+        school.addRoster(this);
     }
     public School getSchool () {
      return school;
