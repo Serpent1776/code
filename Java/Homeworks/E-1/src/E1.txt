@@ -1,0 +1,16 @@
+Jack Hemling
+2/10/2023
+Homework E-1
+This is my own work
+
+ Example Output:
+ This school's name is GlenBrook North High School and is in Illinois. Its principal is Ed Rooney.
+ Students that attend this school are:
+ Ferris Bueller
+ Ed Rooney, Illinois
+ Ferris Bueller, Illinois, School: GlenBrook North High School
+ This school's name is Chicago High School and is in chicago. Its principal is Chicago High Principal.
+ Students that attend this school are:
+ Andie Walsh
+ Chicago High Principal, Chicago
+ Andie Walsh, Illinois, School: Chicago High School

@@ -1,3 +1,9 @@
+/*
+ * Jack Hemling
+ * 2/10/2023
+ * Homework E-1
+ * This is my own work
+ */
 public class E1 {
     public static void main(String[] args) throws Exception {
         Person edRooney = new Person("Ed Rooney", "Illinois"); 

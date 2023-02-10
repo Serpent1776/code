@@ -1,3 +1,9 @@
+/*
+ * Jack Hemling
+ * 2/10/2023
+ * Homework E-1
+ * This is my own work
+ */
 public class Person {
     private String name;
     private String citizenship;
