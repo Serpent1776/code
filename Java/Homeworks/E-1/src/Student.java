@@ -1,0 +1,19 @@
+public class Student extends Person {
+    private School school;
+    
+
+    public Student(String name, String citizenship, School school) {
+        super(name, citizenship);
+        this.school = school;
+    }
+    public School getSchool () {
+     return school;
+    }
+    @Override 
+    public String toString() {
+        return super.toString() + "\nStudent School is" + school;
+    }
+    public boolean equals(Student two) {
+        return super.equals(two) && this.school.equals(two.getSchool());
+    }
+}

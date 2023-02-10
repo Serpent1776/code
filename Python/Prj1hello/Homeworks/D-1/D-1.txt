@@ -1,0 +1,22 @@
+  Jack Hemling
+  2/6/2023
+  Homework D-1  
+  This is my own work
+
+Example Output:
+
+ Lamp Array:
+ OFF     OFF     ON      OFF     OFF
+ OFF     ON      ON      OFF     OFF
+ OFF     OFF     OFF     OFF     ON
+ ON      ON      OFF     OFF     OFF
+ ON      ON      ON      ON      OFF
+ OFF     ON      OFF     OFF     OFF
+
+ The Pranked Lamp Array:
+ ON      ON      OFF     ON      ON
+ ON      OFF     OFF     ON      ON
+ OFF     OFF     OFF     OFF     OFF
+ OFF     OFF     OFF     OFF     OFF
+ ON      ON      ON      ON      ON
+ ON      ON      ON      ON      ON

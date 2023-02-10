@@ -1,0 +1,21 @@
+  Jack Hemling
+  2/3/2023
+  Homework Lab-1
+  This is my own work
+
+example output:
+a card has a suit and a value of one character
+how many cards do you want? 2
+card 0 suit:
+card 0 suit:
+a
+value 0 suit:
+a
+card 1 suit:
+a
+value 1 suit:
+a
+aa
+aa
+0 == 1 false
+aa
