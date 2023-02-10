@@ -1,4 +1,4 @@
-public class App {
+public class E1 {
     public static void main(String[] args) throws Exception {
         Person edRooney = new Person("Ed Rooney", "Illinois"); 
         School glenBrookNorthHighSchool = new School("GlenBrook North High School", "Illinois", edRooney);
