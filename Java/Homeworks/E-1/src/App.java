@@ -7,5 +7,6 @@ public class App {
         Student ferris = new Student("Ferris Bueller", "Illinois", glenBrookNorthHighSchool);
         Student andie = new Student("Andie Walsh", "Illinois", chicagoHigh);
         System.out.print(glenBrookNorthHighSchool);
+        System.out.print(chicagoHigh);
     }
 }
