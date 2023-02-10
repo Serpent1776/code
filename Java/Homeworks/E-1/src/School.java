@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 public class School {
-    String schoolName;
-    String state;
-    Person principal;
-    ArrayList<Student> roster;
+    private String schoolName;
+    private String state;
+    private Person principal;
+    private ArrayList<Student> roster;
     public School(String schoolName, String state, Person principal) {
         this.schoolName = schoolName;
         this.state = state;
