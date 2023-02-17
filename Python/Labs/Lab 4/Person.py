@@ -1,8 +1,8 @@
 class Person:
 
- __name = ""
- __address = ""
- __birthDay = ""
+ __name = None
+ __address = None
+ __birthDay = None
 
  def __init__(self,name,address,birthday):
   self.__name = name
