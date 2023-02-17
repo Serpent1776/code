@@ -1,0 +1,8 @@
+Jack Hemling
+  2/17/2023
+  Homework D-1  
+  This is my own work
+
+Example Output:
+<Person.Person object at 0x000001CD8331F550>
+<Client.Client object at 0x000001CD8331F4F0>None
