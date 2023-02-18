@@ -1,0 +1,36 @@
+Jack Hemling
+2/18/2022
+Homework F-1
+This is my own work
+
+Example Output:
+ Test Start: True
+ Count: 1
+ Step: 3
+ Original Count: 1
+ Original Step: 3
+ Count: 1
+ Step: 3
+ Original Count: 1
+ Original Step: 3
+ they are increased now by 3: True
+ they are decreased now by 5: True
+ Count: -1
+ Step: 5
+ Original Count: 1
+ Original Step: 3
+ Count: -1
+ Step: 5
+ Original Count: 1
+ Original Step: 3
+ the counters are reset: True
+ step reset and increment for first only was done: False
+ Count: 4
+ Step: 3
+ Original Count: 1
+ Original Step: 3
+ Count: 1
+ Step: 3
+ Original Count: 1
+ Original Step: 3
+ Test Complete
