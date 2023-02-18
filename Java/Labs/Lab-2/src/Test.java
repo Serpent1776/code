@@ -5,16 +5,14 @@ public class Test {
         System.out.println("a card has a suit and a value of one character");
         System.out.print("how many cards do you want? ");
         int cardRange = input.nextInt();
-        System.out.println();
+        //System.out.println();
         Card[] deck = new Card[cardRange];
-        System.out.println("card " + 0 + " suit: ");
-        String cardv = input.nextLine();
         for(int i = 0; i < deck.length; i++) {
-        System.out.println("card " + i + " suit: ");
-        String cardc = input.nextLine();
-        System.out.println("value " + i + " suit: ");
-        String cardsu = input.nextLine();
-        deck[i] = new Card(cardc, cardsu);
+            System.out.println("card " + i + " suit: ");
+            String cardc = input.nextLine();
+            System.out.println("value " + i + " suit: ");
+            String cardsu = input.nextLine();
+            deck[i] = new Card(cardc, cardsu);
         }
         
         for(int i = 0; i < deck.length; i++) {
