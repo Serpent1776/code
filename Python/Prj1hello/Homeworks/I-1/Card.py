@@ -1,3 +1,9 @@
+"""
+  Jack Hemling
+  3/1/2023
+  Homework D-1
+  This is my own work
+ """
 class Card:
     __card_type = None
     __card_value = None
@@ -7,8 +13,11 @@ class Card:
         self.__card_value = card_value
         
     def __str__(self):
-        return self.__card_type + "," + str(self.__card_value)
+        return self.__card_type + ", " + str(self.__card_value)
     def get_type(self):
         return self.__card_type
     def get_value(self):
         return self.__card_value
+    def pop(self):
+        return self
+    
