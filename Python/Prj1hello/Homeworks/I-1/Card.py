@@ -18,6 +18,9 @@ class Card:
         return self.__card_type
     def get_value(self):
         return self.__card_value
+    """
+    this pop() just fixes an attribute error, by the card sending itself. 
+    """
     def pop(self):
         return self
     

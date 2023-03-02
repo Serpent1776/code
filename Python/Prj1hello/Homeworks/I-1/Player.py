@@ -19,8 +19,11 @@ class Player:
         self.__player_True_win_num = 0
     def set_deck(self, the_deck):
         self.__player_deck = the_deck
+    """
+    set_card makes the popped card from the deck, the card for the game
+    """
     def set_card(self):
-        self.__player_card = self.__player_deck.popper()
+        self.__player_card = self.__player_deck.pop()
     def get_deck(self):
         return self.__player_deck
     def get_card(self):

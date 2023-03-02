@@ -2,286 +2,759 @@ Jack Hemling
 3/1/2023
 Homework D-1
 This is my own work
+
+
 Example Output:
+
+
 Hi, you both will be playing Spader!
 You'll find out how it plays, the game has two players!
-hi, what is the name of player one? hg
-hi, what is the name of player two? hj
+hi, what is the name of player one? Jack
+hi, what is the name of player two? Dr. Portier
 the game will now begin
 round 0:
-Club, 9
-Spade, 12
-hj wins this round
-score is 0 - 1
-round 1:
-Pearl, 8
-Pearl, 4
-hg wins this round
-score is 1 - 1
-round 2:
-Diamond, 6
-Diamond, 9
-hj wins this round
-score is 1 - 2
-round 3:
-Pearl, 3
-Spade, 8
-hj wins this round
-score is 1 - 3
-round 4:
-Spade, 6
-Pearl, 7
-hg wins this round
-score is 2 - 3
-round 5:
-Spade, 9
-Spade, 10
-hj wins this round
-score is 2 - 4
-round 6:
-Spade, 3
-Pearl, 12
-hg wins this round
-score is 3 - 4
-round 7:
-Club, 13
-Diamond, 10
-hg wins this round
-score is 4 - 4
-round 8:
-Club, 11
-Diamond, 5
-hg wins this round
-score is 5 - 4
-round 9:
-Club, 4
-Diamond, 13
-hj wins this round
-score is 5 - 5
-round 10:
-Club, 3
-Club, 6
-hj wins this round
-score is 5 - 6
-round 11:
-Spade, 2
-Club, 7
-hg wins this round
-score is 6 - 6
-round 12:
-Diamond, 11
-Pearl, 10
-hg wins this round
-score is 7 - 6
-round 13:
-Pearl, 5
-Club, 12
-hj wins this round
-score is 7 - 7
-round 14:
-Club, 1
-Pearl, 13
-hj wins this round
-score is 7 - 8
-round 15:
-Pearl, 1
-Spade, 11
-hj wins this round
-score is 7 - 9
-round 16:
-Pearl, 11
-Diamond, 3
-hg wins this round
-score is 8 - 9
-round 17:
-Diamond, 4
-Diamond, 2
-hg wins this round
-score is 9 - 9
-round 18:
-Spade, 4
-Spade, 1
-hg wins this round
-score is 10 - 9
-round 19:
-Pearl, 2
-Spade, 5
-hj wins this round
-score is 10 - 10
-round 20:
+
 Club, 5
-Club, 2
-hg wins this round
-score is 11 - 10
-round 21:
-Spade, 13
-Diamond, 1
-hg wins this round
-score is 12 - 10
-round 22:
-Diamond, 12
-Diamond, 7
-hg wins this round
-score is 13 - 10
-round 23:
-Club, 8
-Club, 10
-hj wins this round
-score is 13 - 11
-round 24:
-Pearl, 9
-Spade, 7
-hj wins this round
-score is 13 - 12
-round 25:
+Pearl, 12
+Dr. Portier wins this round
+score is 0 - 1
+
+
+
+round 1:
+
+Spade, 5
+Spade, 9
+Dr. Portier wins this round
+score is 0 - 2
+
+
+
+round 2:
+
+Diamond, 2
+Pearl, 10
+Dr. Portier wins this round
+score is 0 - 3
+
+
+
+round 3:
+
+Diamond, 11
+Club, 3
+Jack wins this round
+score is 1 - 3
+
+
+
+round 4:
+
+Spade, 11
 Diamond, 8
+Jack wins this round
+score is 2 - 3
+
+
+
+round 5:
+
+Spade, 13
+Club, 9
+Jack wins this round
+score is 3 - 3
+
+
+
+round 6:
+
+Club, 12
+Spade, 8
+Dr. Portier wins this round
+score is 3 - 4
+
+
+
+round 7:
+
+Club, 10
+Pearl, 9
+Jack wins this round
+score is 4 - 4
+
+
+
+round 8:
+
+Pearl, 2
+Club, 2
+Same Score! There is a tie, so cards go back in and then the decks are reshuffled!
+
+
+
+round 9:
+
+Diamond, 10
+Spade, 3
+Dr. Portier wins this round
+score is 4 - 5
+
+
+
+round 10:
+
+Pearl, 1
+Diamond, 6
+Dr. Portier wins this round
+score is 4 - 6
+
+
+
+round 11:
+
+Pearl, 5
+Spade, 7
+Dr. Portier wins this round
+score is 4 - 7
+
+
+
+round 12:
+
+Diamond, 12
+Pearl, 7
+Jack wins this round
+score is 5 - 7
+
+
+
+round 13:
+
 Pearl, 6
-hg wins this round
-score is 14 - 12
-hg wins the game
+Club, 2
+Jack wins this round
+score is 6 - 7
+
+
+
+round 14:
+
+Diamond, 5
+Club, 7
+Dr. Portier wins this round
+score is 6 - 8
+
+
+
+round 15:
+
+Club, 1
+Club, 13
+Dr. Portier wins this round
+score is 6 - 9
+
+
+
+round 16:
+
+Diamond, 3
+Diamond, 1
+Jack wins this round
+score is 7 - 9
+
+
+
+round 17:
+
+Diamond, 4
+Club, 8
+Dr. Portier wins this round
+score is 7 - 10
+
+
+
+round 18:
+
+Diamond, 13
+Pearl, 4
+Jack wins this round
+score is 8 - 10
+
+
+
+round 19:
+
+Spade, 10
+Pearl, 8
+Jack wins this round
+score is 9 - 10
+
+
+
+round 20:
+
+Club, 11
+Spade, 4
+Dr. Portier wins this round
+score is 9 - 11
+
+
+
+round 21:
+
+Diamond, 7
+Spade, 2
+Dr. Portier wins this round
+score is 9 - 12
+
+
+
+round 22:
+
+Pearl, 2
+Spade, 12
+Dr. Portier wins this round
+score is 9 - 13
+
+
+
+round 23:
+
+Pearl, 3
+Spade, 1
+Dr. Portier wins this round
+score is 9 - 14
+
+
+
+round 24:
+
+Club, 4
+Spade, 6
+Dr. Portier wins this round
+score is 9 - 15
+
+
+
+round 25:
+
+Pearl, 13
+Club, 6
+Jack wins this round
+score is 10 - 15
+
+
+
+round 26:
+
+Diamond, 9
+Pearl, 11
+Dr. Portier wins this round
+score is 10 - 16
+
+
+
+Dr. Portier wins the game
+
+
+
 game 1 has concluded, would you like another one? Yes or No? Yes
 Hi, you both will be playing Spader, again!
 You know how this plays!
-need name changes? Yes or No? No
+need name changes? Yes or No? Yes
+hi, what is the name of player one? Dr. Portier
+hi, what is the name of player two? Jack
 the game will now begin
 round 0:
-Spade, 3
-Pearl, 7
-hg wins this round
-score is 1 - 0
-round 1:
-Spade, 5
-Pearl, 5
-hg wins this round
-score is 2 - 0
-round 2:
-Spade, 6
-Club, 12
-hg wins this round
-score is 3 - 0
-round 3:
-Diamond, 6
-Pearl, 10
-hj wins this round
-score is 3 - 1
-round 4:
-Club, 2
-Club, 6
-hj wins this round
-score is 3 - 2
-round 5:
-Club, 11
-Spade, 4
-hj wins this round
-score is 3 - 3
-round 6:
-Spade, 2
-Diamond, 5
-hg wins this round
-score is 4 - 3
-round 7:
-Spade, 8
-Pearl, 4
-hg wins this round
-score is 5 - 3
-round 8:
-Spade, 7
-Pearl, 9
-hg wins this round
-score is 6 - 3
-round 9:
-Spade, 10
-Spade, 12
-hj wins this round
-score is 6 - 4
-round 10:
-Club, 7
-Diamond, 1
-hg wins this round
-score is 7 - 4
-round 11:
-Club, 4
-Diamond, 8
-hj wins this round
-score is 7 - 5
-round 12:
-Pearl, 11
-Spade, 9
-hj wins this round
-score is 7 - 6
-round 13:
+
 Diamond, 13
-Pearl, 1
-hg wins this round
-score is 8 - 6
-round 14:
-Pearl, 6
-Diamond, 12
-hj wins this round
-score is 8 - 7
-round 15:
-Diamond, 11
-Diamond, 9
-hg wins this round
-score is 9 - 7
-round 16:
-Spade, 13
-Club, 1
-hg wins this round
-score is 10 - 7
-round 17:
-Club, 5
-Pearl, 8
-hj wins this round
-score is 10 - 8
-round 18:
-Pearl, 13
-Club, 13
-Same Score! There is a tie, so cards go back in and then the decks are reshuffled!
-round 19:
+Pearl, 11
+Dr. Portier wins this round
+score is 1 - 0
+
+
+
+round 1:
+
 Spade, 1
 Spade, 11
-hj wins this round
-score is 10 - 9
-round 20:
-Pearl, 2
-Diamond, 7
-hj wins this round
-score is 10 - 10
-round 21:
-Pearl, 13
-Pearl, 12
-hg wins this round
-score is 11 - 10
-round 22:
+Jack wins this round
+score is 1 - 1
+
+
+
+round 2:
+
+Spade, 9
 Diamond, 4
-Pearl, 3
-hg wins this round
-score is 12 - 10
-round 23:
+Dr. Portier wins this round
+score is 2 - 1
+
+
+
+round 3:
+
 Club, 9
-Diamond, 2
-hg wins this round
-score is 13 - 10
-round 24:
-Club, 8
+Pearl, 5
+Dr. Portier wins this round
+score is 3 - 1
+
+
+
+round 4:
+
 Diamond, 10
-hj wins this round
-score is 13 - 11
-round 25:
-Club, 3
+Spade, 4
+Jack wins this round
+score is 3 - 2
+
+
+
+round 5:
+
 Diamond, 3
+Club, 11
+Jack wins this round
+score is 3 - 3
+
+
+
+round 6:
+
+Diamond, 1
+Spade, 13
+Jack wins this round
+score is 3 - 4
+
+
+
+round 7:
+
+Pearl, 12
+Club, 12
 Same Score! There is a tie, so cards go back in and then the decks are reshuffled!
-round 26:
-Club, 3
-Club, 13
-hj wins this round
-score is 13 - 12
-round 27:
+
+
+
+round 8:
+
 Club, 10
+Club, 8
+Dr. Portier wins this round
+score is 4 - 4
+
+
+
+round 9:
+
+Pearl, 6
+Spade, 10
+Jack wins this round
+score is 4 - 5
+
+
+
+round 10:
+
+Spade, 6
+Diamond, 8
+Dr. Portier wins this round
+score is 5 - 5
+
+
+
+round 11:
+
+Spade, 8
+Club, 6
+Dr. Portier wins this round
+score is 6 - 5
+
+
+
+round 12:
+
+Club, 3
+Pearl, 1
+Dr. Portier wins this round
+score is 7 - 5
+
+
+
+round 13:
+
+Club, 13
+Club, 7
+Dr. Portier wins this round
+score is 8 - 5
+
+
+
+round 14:
+
+Pearl, 4
+Diamond, 5
+Jack wins this round
+score is 8 - 6
+
+
+
+round 15:
+
+Spade, 12
+Club, 12
+Dr. Portier wins this round
+score is 9 - 6
+
+
+
+round 16:
+
+Spade, 3
+Diamond, 9
+Dr. Portier wins this round
+score is 10 - 6
+
+
+
+round 17:
+
+Pearl, 8
+Diamond, 7
+Dr. Portier wins this round
+score is 11 - 6
+
+
+
+round 18:
+
+Spade, 7
+Pearl, 2
+Dr. Portier wins this round
+score is 12 - 6
+
+
+
+round 19:
+
+Pearl, 9
+Pearl, 7
+Dr. Portier wins this round
+score is 13 - 6
+
+
+
+round 20:
+
+Club, 5
+Diamond, 2
+Dr. Portier wins this round
+score is 14 - 6
+
+
+
+round 21:
+
+Club, 4
+Diamond, 11
+Jack wins this round
+score is 14 - 7
+
+
+
+round 22:
+
+Pearl, 10
+Club, 1
+Dr. Portier wins this round
+score is 15 - 7
+
+
+
+round 23:
+
+Pearl, 13
+Club, 2
+Dr. Portier wins this round
+score is 16 - 7
+
+
+
+round 24:
+
+Pearl, 3
+Spade, 2
+Jack wins this round
+score is 16 - 8
+
+
+
+round 25:
+
+Pearl, 12
+Diamond, 6
+Dr. Portier wins this round
+score is 17 - 8
+
+
+
+round 26:
+
+Spade, 5
+Diamond, 12
+Dr. Portier wins this round
+score is 18 - 8
+
+
+
+Dr. Portier wins the game
+
+
+
+game 2 has concluded, would you like another one? Yes or No? Yes
+Hi, you both will be playing Spader, again!
+You know how this plays!
+need name changes? Yes or No? Yes
+hi, what is the name of player one? Jack
+hi, what is the name of player two? Dr. Portier
+the game will now begin
+round 0:
+
+Pearl, 11
+Spade, 13
+Dr. Portier wins this round
+score is 0 - 1
+
+
+
+round 1:
+
+Diamond, 13
+Pearl, 4
+Jack wins this round
+score is 1 - 1
+
+
+
+round 2:
+
+Spade, 2
+Diamond, 6
+Jack wins this round
+score is 2 - 1
+
+
+
+round 3:
+
+Diamond, 8
+Pearl, 10
+Dr. Portier wins this round
+score is 2 - 2
+
+
+
+round 4:
+
+Club, 2
+Diamond, 10
+Dr. Portier wins this round
+score is 2 - 3
+
+
+
+round 5:
+
+Pearl, 2
+Spade, 8
+Dr. Portier wins this round
+score is 2 - 4
+
+
+
+round 6:
+
+Spade, 1
+Pearl, 5
+Jack wins this round
+score is 3 - 4
+
+
+
+round 7:
+
+Diamond, 4
+Diamond, 11
+Dr. Portier wins this round
+score is 3 - 5
+
+
+
+round 8:
+
+Club, 4
+Club, 10
+Dr. Portier wins this round
+score is 3 - 6
+
+
+
+round 9:
+
+Diamond, 7
+Spade, 6
+Dr. Portier wins this round
+score is 3 - 7
+
+
+
+round 10:
+
+Spade, 5
+Club, 9
+Jack wins this round
+score is 4 - 7
+
+
+
+round 11:
+
+Club, 3
+Club, 7
+Dr. Portier wins this round
+score is 4 - 8
+
+
+
+round 12:
+
+Spade, 3
+Pearl, 1
+Jack wins this round
+score is 5 - 8
+
+
+
+round 13:
+
+Club, 13
+Club, 5
+Jack wins this round
+score is 6 - 8
+
+
+
+round 14:
+
+Diamond, 12
+Club, 11
+Jack wins this round
+score is 7 - 8
+
+
+
+round 15:
+
+Pearl, 12
+Pearl, 9
+Jack wins this round
+score is 8 - 8
+
+
+
+round 16:
+
+Club, 6
+Spade, 11
+Dr. Portier wins this round
+score is 8 - 9
+
+
+
+round 17:
+
+Spade, 4
+Club, 8
+Jack wins this round
+score is 9 - 9
+
+
+
+round 18:
+
+Diamond, 9
+Club, 1
+Jack wins this round
+score is 10 - 9
+
+
+
+round 19:
+
+Spade, 9
+Pearl, 6
+Jack wins this round
+score is 11 - 9
+
+
+
+round 20:
+
+Spade, 10
+Spade, 7
+Jack wins this round
+score is 12 - 9
+
+
+
+round 21:
+
+Diamond, 5
+Pearl, 8
+Dr. Portier wins this round
+score is 12 - 10
+
+
+
+round 22:
+
+Diamond, 2
 Diamond, 3
-hg wins this round
+Dr. Portier wins this round
+score is 12 - 11
+
+
+
+round 23:
+
+Spade, 12
+Pearl, 7
+Jack wins this round
+score is 13 - 11
+
+
+
+round 24:
+
+Pearl, 3
+Pearl, 13
+Dr. Portier wins this round
+score is 13 - 12
+
+
+
+round 25:
+
+Club, 12
+Diamond, 1
+Jack wins this round
 score is 14 - 12
-hg wins the game
-game 2 has concluded, would you like another one? Yes or No? No
-hg wins overall! Score is 2 - 0
+
+
+
+Jack wins the game
+
+
+
+game 3 has concluded, would you like another one? Yes or No? No
+Jack wins overall! Score is 2 - 1
