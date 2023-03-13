@@ -1,3 +1,9 @@
+"""
+  Jack Hemling
+  3/12/2023
+  Homework D-1
+  This is my own work
+"""
 from stack import stack
 
 def main():

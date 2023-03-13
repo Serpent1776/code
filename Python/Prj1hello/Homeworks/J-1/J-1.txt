@@ -1,0 +1,10 @@
+Jack Hemling
+3/12/2023
+Homework D-1
+This is my own work
+example output:
+ Hi, user give me an expression please:
+ An example: <<()>>
+ parentheses - (), curly brackets - {}, square brackets - [], and triangle brackets - <> will be evaluated.
+ Your expersssion: <----------<===========<----------------->>{
+ Your expression is False
