@@ -1,4 +1,4 @@
-class seq:
+class seq: #a sequence from a start, incrementation, and count(times the sequence is done)
     
     __start =  None
     __increment = 1
@@ -17,7 +17,7 @@ class seq:
         L = []
         x = self.__start
         while cnt < self.__count:
-            L.append(x)
+            L.append(x) #this debug breakpoint activates the loop hits this line 5 times
             x += self.__increment
             cnt += 1
         return L
