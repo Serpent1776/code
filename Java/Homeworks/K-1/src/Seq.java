@@ -1,4 +1,10 @@
 public class Seq {
+   /*
+    * Jack Hemling
+    * 3/15/2023
+    * Homework K-1
+    * This is my own work
+    */ 
     /* code that was translated
     class seq: #a sequence from a start, incrementation, and count(times the sequence is done)
     
@@ -39,16 +45,18 @@ public class Seq {
     private int inc;
     private int length;
     private int[] seq;
+    private String name;
 
-    public Seq(int start, int inc, int length) {
+    public Seq(String name, int start, int inc, int length) {
         this.start = start;
         this.inc = inc;
         this.length = length;
+        this.name = name;
         this.seq = new int[length];
-        int arrNum = start;
+        int arrNum = this.start;
         for(int i = 0; i < this.seq.length; i++) {
             this.seq[i] = arrNum;
-            arrNum += inc; 
+            arrNum += this.inc; 
         } 
     }
     public int size() {
@@ -61,7 +69,7 @@ public class Seq {
         return this.seq[index];
     }
     public String toString() {
-        String o = "[";
+        String o = this.name + ": {";
         for(int i = 0; i < this.length; i++) {
             if(i < this.length - 1) {
           o += this.seq[i] + ", ";
@@ -69,20 +77,20 @@ public class Seq {
                 o += this.seq[i];
             }
         }
-        o += "]";
+        o += "}";
         return o;
     }
     public int[] inCommon(Seq otherSeq) {
-        int[] leNull = {-1, -1};
+        int[] indexes = {-1, -1};
         for(int i = 0; i < this.length; i++) {
             for(int u = 0; u < otherSeq.length; u++) {
                if(otherSeq.seq[u] == this.seq[i]) { // I know O^n runtime but is the only way I know how to do this.
-                int[] index = {i, u};    
-                return index;
+                indexes[0] = i;
+                indexes[1] = u;
+                return indexes;
                 }
             }
     }
-    
-    return leNull;
+    return indexes;
   }
 }
