@@ -40,13 +40,15 @@ public class Seq {
     private int length;
     private int[] seq;
 
-    public Seq(start, inc, length) {
+    public Seq(int start, int inc, int length) {
         this.start = start;
         this.inc = inc;
         this.length = length;
-        this.seq = new int(length);
-        for(int i = start; i < this.seq.length; i+= inc) {
-            this.seq[i] = i;
+        this.seq = new int[length];
+        int arrNum = start;
+        for(int i = 0; i < this.seq.length; i++) {
+            this.seq[i] = arrNum;
+            arrNum += inc; 
         } 
     }
     public int size() {
@@ -56,20 +58,31 @@ public class Seq {
         return this.seq;
     }
     public int get(int index) {
-        return this.seqq[index];
+        return this.seq[index];
     }
     public String toString() {
-        return this.seq;
-    }
-    public int inCommon(Seq otherseq) {
-        int[] otherArr = otherseq.getSeq()
-        for(int i; i < this.length; i++) {
-            for(otherArr: int u) {
-                if(this.seq[i] == otherArr[u]) { // I know O^n runtime but is the only way I know how to do this.
-                    return i;
-                }
+        String o = "[";
+        for(int i = 0; i < this.length; i++) {
+            if(i < this.length - 1) {
+          o += this.seq[i] + ", ";
+            } else {
+                o += this.seq[i];
             }
         }
-        return -1;
+        o += "]";
+        return o;
     }
+    public int[] inCommon(Seq otherSeq) {
+        int[] leNull = {-1, -1};
+        for(int i = 0; i < this.length; i++) {
+            for(int u = 0; u < otherSeq.length; u++) {
+               if(otherSeq.seq[u] == this.seq[i]) { // I know O^n runtime but is the only way I know how to do this.
+                int[] index = {i, u};    
+                return index;
+                }
+            }
+    }
+    
+    return leNull;
+  }
 }
