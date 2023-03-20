@@ -1,3 +1,9 @@
+"""
+Jack Hemling
+3/18/2022
+Project 1
+This is my own work!!!
+"""
 class table:
     tab = None #fixed 2D array
     purchased = None #unfixed 2D array

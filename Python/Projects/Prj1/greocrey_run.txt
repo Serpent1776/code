@@ -1,0 +1,63 @@
+
+
+
+Example output:
+hi shopper, what section would you like to go today? 1, 2, 3, 4, or 5? 3
+Name: television, Cost: 150.0, Amount you have: 0
+Name: airpods, Cost: 90.0, Amount you have: 0
+Name: bluetooth headphones, Cost: 30.0, Amount you have: 0
+Name: a month of ultimate, Cost: 15.0, Amount you have: 0
+Name: a year of online, Cost: 40.0, Amount you have: 0
+
+Accepted formats: (purchases multiple) "name of item", anmount of item. Example: "apple", 3
+                  (purchases one) "name of item" Example: "apple"
+Which item would you like to purchase? "television"  
+this television has been purchased once
+Would you like to continue buying in this section? say yes if so: no
+would you like to move, remove, or checkout? move
+move to which section? 1, 2, 3, 4, or 5? 1
+Name: apple, Cost: 1.0, Amount you have: 0
+Name: banana, Cost: 0.9, Amount you have: 0
+Name: orange, Cost: 0.95, Amount you have: 0
+Name: slice of ham, Cost: 3.0, Amount you have: 0
+Name: slice of cheese, Cost: 1.0, Amount you have: 0
+
+Accepted formats: (purchases multiple) "name of item", anmount of item. Example: "apple", 3
+                  (purchases one) "name of item" Example: "apple"
+Which item would you like to purchase? "apple", 5 
+you purchased applex5
+Would you like to continue buying in this section? say yes if so: yes
+To keep purchasing items, just keep saying their names. You are in Section 1
+Name: apple, Cost: 1.0, Amount you have: 5
+Name: banana, Cost: 0.9, Amount you have: 0
+Name: orange, Cost: 0.95, Amount you have: 0
+Name: slice of ham, Cost: 3.0, Amount you have: 0
+Name: slice of cheese, Cost: 1.0, Amount you have: 0
+
+To stop this, put "stop": 
+to see accepted formats, put "a_f":
+to see the section put section number in place of the item: "orange", 10
+you purchased orangex10
+To stop this, put "stop": 
+to see accepted formats, put "a_f":
+to see the section put section number in place of the item: "stop"
+would you like to move, remove, or checkout? remove
+Name: apple, Cost: 1.0, Amount you have: 5
+Name: orange, Cost: 0.95, Amount you have: 10
+Name: television, Cost: 150.0, Amount you have: 1
+
+To stop this, put "stop": 
+to see accepted formats, put "a_f":
+to see what purchased, put "pur": "apple", 5
+you removed applex5
+To stop this, put "stop": 
+to see accepted formats, put "a_f":
+to see what purchased, put "pur": "a_f"
+Only Accepted format: (removes multiple) "name of item", anmount of item. Example: "apple", 3
+To stop this, put "stop":
+to see accepted formats, put "a_f":
+to see what purchased, put "pur": "stop"
+would you like to move or checkout? checkout
+Name: orange, Cost: 0.95, Amount you have: 10
+Name: television, Cost: 150.0, Amount you have: 1
+total for today is: 159.5

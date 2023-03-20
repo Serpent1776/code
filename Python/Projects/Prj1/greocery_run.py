@@ -1,6 +1,11 @@
 from table import table
 from item import item
-
+"""
+Jack Hemling
+3/19/2022
+Project 1
+This is my own work!!!
+"""
 def sum_cost(the_store):
     le_sum = 0
     purchased_items = the_store.get_purchased()

@@ -1,3 +1,9 @@
+"""
+Jack Hemling
+3/18/2022
+Project 1
+This is my own work!!!
+"""
 class item:
     name = ""
     cost = None
