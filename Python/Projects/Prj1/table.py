@@ -1,27 +1,25 @@
 """
 Jack Hemling
-3/18/2022
+3/20/2022
 Project 1
 This is my own work!!!
 """
 class table:
-    tab = None #fixed 2D array
-    purchased = None #unfixed 2D array
+    tab = None 
 
-    def __init__(self, TwoD_item_arr):
-        self.tab = TwoD_item_arr
-        self.purchased = [[], [], [], [], []]
+    def __init__(self, TwoD_arr):
+        self.tab = TwoD_arr
     def str_section(self,sect_num):
         sum_string = ""
         for i in self.tab[sect_num]:
             sum_string += str(i) + "\n"
         return sum_string
-    def purchased_str(self):
-        reciept = ""
-        for i in range(len(self.purchased)):
-            for q in range(len(self.purchased[i])):
-                reciept += str(self.purchased[i][q]) + "\n"
-        return reciept  
+    def __str__(self):
+        sum_str = ""
+        for i in range(len(self.tab)):
+            for q in range(len(self.tab[i])):
+                sum_str += str(self.tab[i][q]) + "\n"
+        return sum_str  
     def find_item(self, name, the_section):
         for col, item in enumerate(self.tab[the_section]):
             if name == item.get_name():
@@ -33,16 +31,5 @@ class table:
                 if name == item.get_name():
                     return (row, col, item)
         return -1
-    def find_item_purchased(self, item):
-        for row in range(len(self.purchased)):
-            for q in self.purchased[row]:
-                if item is q:
-                    return True
-        return False   
-    def append(self, one_dimensional_location, item):
-       self.purchased[one_dimensional_location].append(item)
-    def remove(self, one_dimensional_location, item):
-       self.purchased[one_dimensional_location].remove(item)  
-    def get_purchased(self):
-        return self.purchased           
-    
+    def get_tab(self):
+        return self.tab     
