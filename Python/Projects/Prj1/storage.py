@@ -10,9 +10,9 @@ from table import table
 class storage(table):
     __purchased = None #unfixed 2D list
 
-    def __init__(self, TwoD_arr, var):
+    def __init__(self, TwoD_arr, empty_arr):
         super().__init__(TwoD_arr)
-        self.__purchased = var
+        self.__purchased = empty_arr
     def sum_cost(the_store):
         le_sum = 0
         purchased_items = the_store.get_purchased()
@@ -32,6 +32,17 @@ class storage(table):
                 if(item == purchased_item):
                     return True, purchased_item
         return False, None
+    def find_item(self, name, the_section):
+        for col, item in enumerate(self.tab[the_section]):
+            if name == item.get_name():
+                return (the_section, col, item)
+        return -1
+    def find_item_2D(self, name):
+        for row in range(len(self.tab)):
+            for col, item in enumerate(self.tab[row]):
+                if(name == item.get_name()):
+                    return (row, col, item)
+        return -1
     def __str__(self):
         sum_str = ""
         for i in range(len(self.__purchased)):

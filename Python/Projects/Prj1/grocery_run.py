@@ -38,12 +38,13 @@ def purchase(the_store, the_section, the_item, amount, location):
             the_store.append(location, dupe)
             dupe.amount_inc(amount)
             return "you purchased " + dupe.get_name() + "x" + str(amount)
+    return "you purchased nothing"   
 
 def remove(the_store, the_item, amount, location):
     the_tuple = the_store.find_item_purchased(the_item)
     if(the_tuple[0]):
         the_tuple[1].amount_dec(amount)
-        if(the_tuple[1].get_amount() < 0):
+        if(the_tuple[1].get_amount() <= 0):
             the_store.remove(location, the_tuple[1])
             return "the item has been removed"
         return "you removed " + the_item.get_name() + "x" + str(amount)
@@ -52,7 +53,7 @@ def remove(the_store, the_item, amount, location):
 def section_process(the_store, the_section):
     section_loop = True
     while section_loop:
-        user_decision = input("do need to see the section items or your receipt? ").lower()
+        user_decision = input("do you need to see the section items or your receipt? ").lower()
         if(user_decision == "section items"): print(the_store.str_section(the_section))
         elif(user_decision == "my receipt"): print(the_store)
         user_decision = input("do you want to purchase, remove, or exit? ").lower()
