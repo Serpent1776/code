@@ -9,9 +9,9 @@ def sum_cost(the_store):
             le_sum += item.get_cost()
     return le_sum
 def checkout(the_store):
-        recipet = the_store.purchased_str()
-        recipet += "total for today is: " + str(sum_cost(the_store))
-        return recipet
+        reciept = the_store.purchased_str()
+        reciept += "total for today is: " + str(sum_cost(the_store))
+        return reciept
 
 def purchase(the_store, user, the_section):
         if(isinstance(user, tuple)):

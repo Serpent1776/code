@@ -11,11 +11,11 @@ class table:
             sum_string += str(i) + "\n"
         return sum_string
     def purchased_str(self):
-        recipet = ""
+        reciept = ""
         for i in range(len(self.purchased)):
             for q in range(len(self.purchased[i])):
-                recipet += str(self.purchased[i][q]) + "\n"
-        return recipet  
+                reciept += str(self.purchased[i][q]) + "\n"
+        return reciept  
     def find_item(self, name, the_section):
         for col, item in enumerate(self.tab[the_section]):
             if name == item.get_name():
