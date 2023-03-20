@@ -5,8 +5,6 @@ class table:
     def __init__(self, TwoD_item_arr):
         self.tab = TwoD_item_arr
         self.purchased = [[], [], [], [], []]
-    #def __str__(self):
-    #    return "NO"
     def str_section(self,sect_num):
         sum_string = ""
         for i in self.tab[sect_num]:
