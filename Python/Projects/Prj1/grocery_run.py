@@ -68,6 +68,7 @@ def section_process(the_store, the_section):
             if(user_amount > 0):
                 if(user_decision == "purchase"): print(purchase(the_store, the_section, user_item, user_amount, confirmed_location[0]))
                 elif(user_decision == "remove"): print(remove(the_store, user_item, user_amount, confirmed_location[0]))
+                else: print("nothing, no decision was made.")
         else:
             print("item does not exist")
     
