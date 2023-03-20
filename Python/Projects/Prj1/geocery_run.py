@@ -90,13 +90,13 @@ def remove_loop(the_store):
             print(remove_item(the_store, user_decision))   
 
 def main():
-    food_names = ["apple", "banana" , "orange", "ham", "cheese"]
+    food_names = ["apple", "banana" , "orange", "slice of ham", "slice of cheese"]
     food_costs = [1.00, 0.90, 0.95, 3.00, 1.00]
     food = list(item(i, q) for i, q in zip(food_names, food_costs)) 
-    candy_names = ["tootsie roll bag", "big hershey chocolate bar", "big bag of gum", "box of reeses puffs", "gummies"]
+    candy_names = ["tootsie roll bag", "big hershey chocolate bar", "big bag of gum", "box of reeses puffs", "bag of gummies"]
     candy_costs = [5.00, 3.00, 9.59, 4.00, 15.00]
     candy = list(item(i, q) for i, q in zip(candy_names, candy_costs)) 
-    electronics_names = ["television", "airpods", "bluetooth headphones", "a month of xbox game pass ultimate", "a year of nintendo switch online"]
+    electronics_names = ["television", "airpods", "bluetooth headphones", "a month of ultimate", "a year of online"]
     electronics_costs = [150.00, 90.00, 30.00, 15.00, 40.00]
     electronics = list(item(i, q) for i, q in zip(electronics_names, electronics_costs)) 
     drink_names = ["sprite box", "coke box", "fanta box", "dr. pepper box", "brisk tea box"]
