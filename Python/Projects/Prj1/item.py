@@ -5,33 +5,35 @@ Project 1
 This is my own work!!!
 """
 class item:
-    name = ""
-    cost = None
-    amount = None
+    __name = ""
+    __cost = None
+    __amount = None
 
     def __init__(self, *args):
-        if(args == 2):
-            self.name = args[0]
-            self.cost = args[1]
-            self.amount = 0
-        if(args == 3):
-            self.name = args[0]
-            self.cost = args[1]
-            self.amount = args[2]
+        if(len(args) == 2):
+            self.__name = args[0]
+            self.__cost = args[1]
+            self.__amount = 0
+        if(len(args) == 3):
+            self.__name = args[0]
+            self.__cost = args[1]
+            self.__amount = args[2]
 
     def __str__(self):
-        return "Name: " + self.name + ", Cost: " + str(self.cost) + ", Amount you have: " + str(self.amount)
+        return "Name: " + self.__name + ", Cost: " + str(self.__cost) + ", Amount you have: " + str(self.__amount)
+    def __eq__(self, other):
+        return (self.__name == other.__name and self.__cost == other.__cost)
     def get_name(self):
-        return self.name
+        return self.__name
     def get_cost(self):
-        return self.cost
+        return self.__cost
     def get_amount(self):
-        return self.amount
+        return self.__amount
     def get_total(self):
-        return self.cost*self.amount
+        return self.__cost*self.__amount
     def get_amount(self):
-        return self.amount
+        return self.__amount
     def amount_inc(self, num):
-        self.amount += num
+        self.__amount += num
     def amount_dec(self, num):
-        self.amount -= num
+        self.__amount -= num

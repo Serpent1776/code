@@ -28,7 +28,7 @@ class table:
     def find_item_2D(self, name):
         for row in range(len(self.tab)):
             for col, item in enumerate(self.tab[row]):
-                if name == item.get_name():
+                if(name == item.get_name()):
                     return (row, col, item)
         return -1
     def get_tab(self):

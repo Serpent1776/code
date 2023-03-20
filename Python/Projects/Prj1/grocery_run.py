@@ -1,4 +1,5 @@
 from storage import storage
+from table import table
 from item import item
 """
 Jack Hemling
@@ -23,7 +24,7 @@ def initalize():
     frozen_costs = [12.00, 8.59, 5.00, 7.00, 4.50]
     frozen = list(item(i, q) for i, q in zip(frozen_names, frozen_costs))
     all_items = [food, candy, electronics, drink, frozen]
-    the_store = storage(all_items)
+    the_store = storage(all_items, [[], [], [], [], []])
     the_run(the_store)
 
 def purchase(the_store, the_section, the_item, amount, location):
@@ -33,9 +34,10 @@ def purchase(the_store, the_section, the_item, amount, location):
         if(the_tuple[0]):
             the_tuple[1].amount_inc(amount)
             return "you purchased " + the_tuple[1].get_name() + "x" + str(amount)
-        the_store.append(dupe, location)
-        dupe.amount_inc(amount)
-        return "you purchased " + dupe.get_name() + "x" + str(amount)
+        else:
+            the_store.append(location, dupe)
+            dupe.amount_inc(amount)
+            return "you purchased " + dupe.get_name() + "x" + str(amount)
 
 def remove(the_store, the_item, amount, location):
     the_tuple = the_store.find_item_purchased(the_item)
@@ -45,19 +47,20 @@ def remove(the_store, the_item, amount, location):
             the_store.remove(location, the_tuple[1])
             return "the item has been removed"
         return "you removed " + the_item.get_name() + "x" + str(amount)
+    return "you removed nothing"
 
 def section_process(the_store, the_section):
     section_loop = True
     while section_loop:
-        user_decision = input("do need to see the section items or your receipt?").lower
+        user_decision = input("do need to see the section items or your receipt? ").lower()
         if(user_decision == "section items"): print(the_store.str_section(the_section))
-        elif(user_decision == "your receipt"): print(the_store)
-        user_decision = input("do you want to purchase, remove, or exit?").lower
+        elif(user_decision == "my receipt"): print(the_store)
+        user_decision = input("do you want to purchase, remove, or exit? ").lower()
         if(user_decision == "exit"):
             section_loop = False
             break
-        user_name = input("Which item?").lower
-        user_amount = abs(int(input("how many?")))
+        user_name = input("Which item? ").lower()
+        user_amount = abs(int(input("how many? ")))
         confirmed_location = the_store.find_item_2D(user_name)
         if(confirmed_location != -1): 
             user_item = confirmed_location[2]
@@ -68,10 +71,10 @@ def section_process(the_store, the_section):
             print("item does not exist")
     
 def section_goto():
-    the_section = 0
-    while(the_section != 0):
-        sections = {"food": 1, "candy": 2, "electronics": 3, "drink": 4, "frozen": 5}
-        section = input("hi shopper, what section would you like to go? food, candy, electronics, drink, or frozen? ")
+    the_section = -1
+    while(the_section == -1):
+        sections = {"food": 0, "candy": 1, "electronics": 2, "drink": 3, "frozen": 4, "checkout": "checkout"}
+        section = input("hi shopper, what section would you like to go? food, candy, electronics, drink, frozen or checkout? ")
         the_section = sections[section]
     return the_section
 
@@ -79,8 +82,12 @@ def the_run(the_store):
     store_run = True
     while store_run:
         the_section = section_goto()
-        print(the_store.str_section(the_section))
-        print(section_process(the_store, the_section))
+        if(isinstance(the_section, int)):
+            print(the_store.str_section(the_section))
+            print(section_process(the_store, the_section))
+        else:
+            print(the_store)
+            break
        
 
 initalize()
