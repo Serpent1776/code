@@ -1,5 +1,8 @@
 
-
+Jack Hemling
+3/20/2022
+Project 1
+This is my own work!!!
 
 Example output:
 hi shopper, what section would you like to go today? 1, 2, 3, 4, or 5? 3
