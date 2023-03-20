@@ -23,13 +23,13 @@ class table:
     def find_item(self, name, the_section):
         for col, obj in enumerate(self.tab[the_section]):
             if name == obj.get_name():
-                return (the_section, col)
+                return (the_section, col, obj)
         return -1
     def find_item_2D(self, name):
         for row in range(len(self.tab)):
             for col, obj in enumerate(self.tab[row]):
                 if(name == obj.get_name()):
-                    return (row, col)
+                    return (row, col, obj)
         return -1
     def get_tab(self):
         return self.tab     
