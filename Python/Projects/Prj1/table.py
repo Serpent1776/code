@@ -28,10 +28,10 @@ class table:
                 return (the_section, col, obj)
         return -1
     def find_item_2D(self, name):
-        for row in range(len(self.tab)):
+        for row in range(len(self.__tab)):
             for col, obj in enumerate(self.__tab[row]):
                 if(name == obj.get_name()):
                     return (row, col, obj)
         return -1
     def get_tab(self):
-        return self.tab     
+        return self.__tab     
