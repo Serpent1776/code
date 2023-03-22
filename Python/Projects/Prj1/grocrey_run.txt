@@ -5,3 +5,34 @@ Project 1
 This is my own work!!!
 
 Example output:
+hi shopper, what section would you like to go? food, candy, electronics, drink, frozen or checkout? food
+Name: apple, Cost: 1.0, Amount you have: 0
+Name: banana, Cost: 0.9, Amount you have: 0
+Name: orange, Cost: 0.95, Amount you have: 0
+Name: slice of ham, Cost: 3.0, Amount you have: 0
+Name: slice of cheese, Cost: 1.0, Amount you have: 0
+
+do you need to see the section items or your receipt? 
+do you want to purchase, remove, or exit? purchase
+Which item? apple
+how many? 10
+you purchased applex10
+do you need to see the section items or your receipt? my receipt
+Name: apple, Cost: 1.0, Amount you have: 10
+total is: 10.0
+do you want to purchase, remove, or exit? purchase
+Which item? orange
+how many? 10
+you purchased orangex10
+do you need to see the section items or your receipt?
+do you want to purchase, remove, or exit? remove
+Which item? apple
+how many? 5
+you removed applex5
+do you need to see the section items or your receipt?
+do you want to purchase, remove, or exit? exit
+None
+hi shopper, what section would you like to go? food, candy, electronics, drink, frozen or checkout? checkout
+Name: apple, Cost: 1.0, Amount you have: 5
+Name: orange, Cost: 0.95, Amount you have: 10
+total is: 14.5

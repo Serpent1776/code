@@ -3,6 +3,8 @@ Jack Hemling
 3/18/2022
 Project 1
 This is my own work!!!
+This class is a child of table to is meant to deal with the data from the grocery_run application
+mainly, the storage of items and finding them.
 """
 from table import table
 

@@ -6,7 +6,10 @@ Jack Hemling
 3/19/2022
 Project 1
 This is my own work!!!
+This program is meant to similate a grocery store run and works with the other classes to do so.
 """
+
+"""initalize is the starting method of the application that sets up all the data that will be used."""
 def initalize():
     food_names = ["apple", "banana" , "orange", "slice of ham", "slice of cheese"]
     food_costs = [1.00, 0.90, 0.95, 3.00, 1.00]
@@ -27,9 +30,10 @@ def initalize():
     the_store = storage(all_items, [[], [], [], [], []])
     the_run(the_store)
 
+"""purchase purchases an item onto the receipt as long as it in the section"""
 def purchase(the_store, the_section, the_item, amount, location):
     if(the_item in the_store.get_tab()[the_section]):
-        dupe = item(the_item.get_name(), the_item.get_cost(), the_item.get_amount())
+        dupe = item(the_item.get_name(), the_item.get_cost(), the_item.get_amount()) #duping for better data. 
         the_tuple = the_store.find_item_purchased(the_item)    
         if(the_tuple[0]):
             the_tuple[1].amount_inc(amount)
@@ -40,6 +44,7 @@ def purchase(the_store, the_section, the_item, amount, location):
             return "you purchased " + dupe.get_name() + "x" + str(amount)
     return "you purchased nothing"   
 
+"""remove removes an item from the receipt"""
 def remove(the_store, the_item, amount, location):
     the_tuple = the_store.find_item_purchased(the_item)
     if(the_tuple[0]):
@@ -50,6 +55,8 @@ def remove(the_store, the_item, amount, location):
         return "you removed " + the_item.get_name() + "x" + str(amount)
     return "you removed nothing"
 
+"""section_process has the user go through the process of purchasing or removing items
+ends by user telling the program that they want to exit."""
 def section_process(the_store, the_section):
     section_loop = True
     while section_loop:
@@ -71,7 +78,8 @@ def section_process(the_store, the_section):
                 else: print("nothing, no decision was made.")
         else:
             print("item does not exist")
-    
+
+"""section_goto asks the user for which section to go and then returns to the_run"""
 def section_goto():
     the_section = -1
     while(the_section == -1):
@@ -80,14 +88,15 @@ def section_goto():
         the_section = sections[section]
     return the_section
 
+"""the_run does the grocery run and makes the program work, is the heart of it."""
 def the_run(the_store):
     store_run = True
     while store_run:
         the_section = section_goto()
         if(isinstance(the_section, int)):
-            print(the_store.str_section(the_section))
-            print(section_process(the_store, the_section))
-        else:
+            print(the_store.str_section(the_section)) #section printed
+            print(section_process(the_store, the_section)) #the process
+        else: #checkout case
             print(the_store)
             break
        

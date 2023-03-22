@@ -3,6 +3,8 @@ Jack Hemling
 3/18/2022
 Project 1
 This is my own work!!!
+This is a basic class that is meant to be for an item object.
+An item would be something that a person would get at a store.
 """
 class item:
     __name = ""

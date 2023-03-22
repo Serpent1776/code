@@ -3,6 +3,8 @@ Jack Hemling
 3/20/2022
 Project 1
 This is my own work!!!
+this class is a general, primative class that the storage class is the child of.
+it's meant to manage a table of objects.
 """
 class table:
     tab = None 
