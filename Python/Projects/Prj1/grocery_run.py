@@ -67,16 +67,17 @@ def section_process(the_store, the_section):
         if(user_decision == "exit"):
             section_loop = False
             break
-        user_name = input("Which item? ").lower()
-        user_amount = abs(int(input("how many? ")))
-        confirmed_location = the_store.find_item_2D(user_name)
-        if(confirmed_location != -1): 
-            user_item = confirmed_location[2]
-            if(user_decision == "purchase"): print(purchase(the_store, the_section, user_item, user_amount, confirmed_location[0]))
-            elif(user_decision == "remove"): print(remove(the_store, user_item, user_amount, confirmed_location[0]))
-            else: print("nothing, no decision was made.")
+        if(user_decision != "purchase" and user_decision != "remove"):
+            print("Nothing, no decision was made.")
         else:
-            print("item does not exist")
+            user_name = input("Which item? ").lower()
+            user_amount = abs(int(input("how many? ")))
+            confirmed_location = the_store.find_item_2D(user_name)
+            if(confirmed_location != -1): 
+                user_item = confirmed_location[2]
+                if(user_decision == "purchase"): print(purchase(the_store, the_section, user_item, user_amount, confirmed_location[0]))
+                elif(user_decision == "remove"): print(remove(the_store, user_item, user_amount, confirmed_location[0]))
+            else: print("Item does not exist.")
 
 """section_goto asks the user for which section to go and then returns to the_run"""
 def section_goto():
