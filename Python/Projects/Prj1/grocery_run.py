@@ -71,9 +71,9 @@ def section_process(the_store, the_section):
             print("Nothing, no decision was made.")
         else:
             user_name = input("Which item? ").lower()
-            user_amount = abs(int(input("how many? ")))
             confirmed_location = the_store.find_item_2D(user_name)
             if(confirmed_location != -1): 
+                user_amount = abs(int(input("how many? ")))
                 user_item = confirmed_location[2]
                 if(user_decision == "purchase"): print(purchase(the_store, the_section, user_item, user_amount, confirmed_location[0]))
                 elif(user_decision == "remove"): print(remove(the_store, user_item, user_amount, confirmed_location[0]))
