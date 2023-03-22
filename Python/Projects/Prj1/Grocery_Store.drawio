@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="0xhTL03ZZ8w8dM94weIE">
-        <mxGraphModel dx="593" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="593" dy="355" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -15,7 +15,7 @@
                 <mxCell id="r9ktLhKTOW2aritXuNVh-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="r9ktLhKTOW2aritXuNVh-1" vertex="1">
                     <mxGeometry y="100" width="180" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="r9ktLhKTOW2aritXuNVh-4" value="- __init__(): constructor&#10;+str_section(int): String&#10;+find_item(str, int): int, int, item &#10;+find_item_2D(str): int, int, item&#10;+find_item_purchased(item): boolean&#10;+__str__(): String&#10;+append(): void&#10;+remove(): void&#10;+sum_cost(): float&#10;+get_purchased(): 2D list" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="r9ktLhKTOW2aritXuNVh-1" vertex="1">
+                <mxCell id="r9ktLhKTOW2aritXuNVh-4" value="- __init__(): constructor&#10;+str_section(int): String&#10;+find_item(str, int): int, int, item &#10;+find_item_2D(str): int, int, item&#10;+find_item_purchased(item): boolean&#10;-__str__(): String&#10;+append(): void&#10;+remove(): void&#10;+sum_cost(): float&#10;+get_purchased(): 2D list" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="r9ktLhKTOW2aritXuNVh-1" vertex="1">
                     <mxGeometry y="108" width="180" height="182" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="Item" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;" parent="1" vertex="1">
@@ -37,30 +37,30 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8" value="Table" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                <mxCell id="8" value="Table" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
                     <mxGeometry x="425" y="270" width="180" height="290" as="geometry">
                         <mxRectangle x="220" y="240" width="100" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="9" value="- tab: fixed 2D obj list&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="8">
+                <mxCell id="9" value="- tab: fixed 2D obj list&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="8" vertex="1">
                     <mxGeometry y="26" width="180" height="74" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="8">
+                <mxCell id="10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="8" vertex="1">
                     <mxGeometry y="100" width="180" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="- __init__(): constructor&#10;+str_section(int): String&#10;+find_item(str, int): int, int, obj &#10;+find_item_2D(str): int, int, obj&#10;+__str__(): string&#10;+get_tab(): 2D list" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="8">
+                <mxCell id="11" value="- __init__(): constructor&#10;+str_section(int): String&#10;+find_item(str, int): int, int, obj &#10;+find_item_2D(str): int, int, obj&#10;-__str__(): string&#10;+get_tab(): 2D list" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="8" vertex="1">
                     <mxGeometry y="108" width="180" height="182" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;" edge="1" parent="1">
+                <mxCell id="15" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;" parent="1" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="410" y="360" as="sourcePoint"/>
                         <mxPoint x="260" y="230" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="16" value="Parent" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="16" value="Parent" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="365" y="350" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="Child" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="18" value="Child" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="260" y="210" width="50" height="30" as="geometry"/>
                 </mxCell>
             </root>
