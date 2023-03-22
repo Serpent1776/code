@@ -35,13 +35,15 @@ class storage(table):
                     return True, purchased_item
         return False, None
     def find_item(self, name, the_section):
-        for col, item in enumerate(self.__tab[the_section]):
+        D_list = self.get_tab()
+        for col, item in enumerate(D_list[the_section]):
             if name == item.get_name():
                 return (the_section, col, item)
         return -1
     def find_item_2D(self, name):
-        for row in range(len(self.__tab)):
-            for col, item in enumerate(self.__tab[row]):
+        D_list = self.get_tab()
+        for row in range(len(D_list)):
+            for col, item in enumerate(D_list[row]):
                 if(name == item.get_name()):
                     return (row, col, item)
         return -1
