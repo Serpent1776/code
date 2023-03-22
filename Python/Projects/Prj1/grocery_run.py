@@ -83,9 +83,12 @@ def section_process(the_store, the_section):
 def section_goto():
     the_section = -1
     while(the_section == -1):
-        sections = {"food": 0, "candy": 1, "electronics": 2, "drink": 3, "frozen": 4, "checkout": "checkout"}
-        section = input("hi shopper, what section would you like to go? food, candy, electronics, drink, frozen or checkout? ")
-        the_section = sections[section]
+            try:
+                sections = {"food": 0, "candy": 1, "electronics": 2, "drink": 3, "frozen": 4, "checkout": "checkout"}
+                section = input("hi shopper, what section would you like to go? food, candy, electronics, drink, frozen or checkout? ")
+                the_section = sections[section]
+            except(KeyError or KeyboardInterrupt):
+                the_section = -1
     return the_section
 
 """the_run does the grocery run and makes the program work, is the heart of it."""
