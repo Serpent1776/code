@@ -36,37 +36,37 @@ public class ThreeThings<T> {
     return (this.one.equals(other.one) && this.two.equals(other.two) && this.three.equals(other.three)); 
     }
     public void swap(int i, int d) {
-        T thingOne = null;
+        T thingTemp = null;
         switch(i) {
-            case 1: thingOne = this.one; break;
-            case 2: thingOne = this.two; break;
-            case 3: thingOne = this.three; break;
+            case 1: thingTemp = this.one; break;
+            case 2: thingTemp = this.two; break;
+            case 3: thingTemp = this.three; break;
         }
         if(i == 1) {
             switch(d) {
                 case 2: this.one = this.two; 
-                        this.two = thingOne;
+                        this.two = thingTemp;
                         break;
                 case 3: this.one = this.three; 
-                        this.three = thingOne;
+                        this.three = thingTemp;
                         break;
             }
         } else if(i == 2) {
             switch(d) {
                 case 1: this.two = this.one; 
-                        this.one = thingOne;
+                        this.one = thingTemp;
                         break;
                 case 3: this.two = this.three; 
-                        this.three = thingOne;
+                        this.three = thingTemp;
                         break;
             }
         } else if(i == 3) {
             switch(d) {
                 case 1: this.three = this.one; 
-                        this.one = thingOne;
+                        this.one = thingTemp;
                         break;
                 case 2: this.three = this.two; 
-                        this.two = thingOne;
+                        this.two = thingTemp;
                         break;
             }
         }
