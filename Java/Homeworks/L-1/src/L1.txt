@@ -1,0 +1,10 @@
+Jack Hemling
+4/4/2023
+Homework K-1
+This is my own work
+Example Output:
+ equal check for strings: true
+ False case: false
+ regular ints: 1, 2, 3
+ swapped ints: 3, 2, 1
+ string output: hello, new, world
