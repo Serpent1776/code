@@ -40,6 +40,13 @@ public class ThreeNames implements Biggest, Comparable<String> {
     return out;
     }
     public int compareTo(String o) {
-        return 1;
+       int subtr = 0;
+         for(int i = 0; i < 3; i++) {
+            subtr = list[0].length() - o.length();
+            if(subtr != 0) {
+                return subtr;
+            }
+         }
+        return subtr;
     }
 }
