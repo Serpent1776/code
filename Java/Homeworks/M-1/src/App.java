@@ -12,6 +12,7 @@ public class App {
             three.assign(2, "SueAnn");
             System.out.println(three);
             System.out.println("Max is " + three.max());
+            System.out.println("the names compared to sus: " + three.compareTo("sus"));
             }
             
                        
