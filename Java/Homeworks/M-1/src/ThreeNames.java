@@ -43,10 +43,16 @@ public class ThreeNames implements Biggest, Comparable<ThreeNames> {
     String out = "";
     for (int i = 0; i < 3; i++) {
     out += i + ":";
+    if (i < 2)
     if (this.occupied[i])
     out += this.list[i] + " ";
     else
     out += "----------" + " ";
+    else
+    if (this.occupied[i])
+    out += this.list[i] + "";
+    else
+    out += "----------" + "";
     }
     return out;
     }

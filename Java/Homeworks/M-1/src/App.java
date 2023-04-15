@@ -16,7 +16,7 @@ public class App {
                     thirtyNames.add(duplName);
                 }
              }
-             System.out.println(thirtyNames);
+             System.out.println(thirtyNames + "\n");
              Collections.sort(thirtyNames);
              System.out.println(thirtyNames);
             }
