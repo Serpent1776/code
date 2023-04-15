@@ -2,7 +2,7 @@
  * Jack Hemling
  * 4/15/2023
  * Homework M-1 
- * Much is notes M, other parts are done by me.
+ * Codes from notes M and modified by me.
  */  
 public class ThreeNames implements Biggest, Comparable<ThreeNames> {
     
@@ -49,7 +49,7 @@ public class ThreeNames implements Biggest, Comparable<ThreeNames> {
     String out = "";
     for (int i = 0; i < 3; i++) {
     out += i + ":";
-    if (i < 2)
+    if (i < 2) 
     if (this.occupied[i])
     out += this.list[i] + " ";
     else

@@ -1,7 +1,8 @@
 Jack Hemling
 4/15/2023
 Homework M-1 
-This is from Notes M
+This is example output of my code.
+
 Example Output:
  [0:sckjnkyfs 1:lm 2:ocq, 0:yf 1:skyxpqslvp 2:ylik, 0:---------- 1:ewutkt 2:ukjkcnjnxp, 0:djcqan 1:yiypo 2:jagw, 0:cxrtwnf 1:j 2:----------, 0:prvtoricev 1:tfvrobmjkn 2:nbch, 0:cfeibbowq 1:nay 2:bqfi, 0:---------- 1:---------- 2:mxd, 0:ijewvypij 1:jnr 2:mlani, 0:uqkdfqye 1:qfslrxaf 2:fmpq]
 
