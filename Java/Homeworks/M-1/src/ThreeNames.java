@@ -1,3 +1,9 @@
+/*
+ * Jack Hemling
+ * 4/15/2023
+ * Homework M-1 
+ * Much is notes M, other parts are done by me.
+ */  
 public class ThreeNames implements Biggest, Comparable<ThreeNames> {
     
     private String[] list;

@@ -1,3 +1,9 @@
+/*
+ * Jack Hemling
+ * 4/15/2023
+ * Homework M-1 
+ * This is my own work
+ */  
 import java.util.ArrayList;
 import java.util.Collections;
 public class App {

@@ -1,0 +1,8 @@
+Jack Hemling
+4/15/2023
+Homework M-1 
+This is from Notes M
+Example Output:
+ [0:vf 1:oow 2:uoe, 0:iqkl 1:rlf 2:fwuo, 0:cbleqeviv 1:gdrasc 2:gaorwbbun, 0:yrgrygcn 1:tevxxhx 2:mhke, 0:udda 1:dyyk 2:xk, 0:df 1:lmduycr 2:jupgxj, 0:rbrkdy 1:a 2:evua, 0:grucypbxx 1:cdivfbchv 2:kc, 0:uuhwdcjhm 1:hrvs 2:t, 0:xnlw 1:djxuiciqs 2:ijibcbiati]
+
+ [0:vf 1:oow 2:uoe, 0:df 1:lmduycr 2:jupgxj, 0:iqkl 1:rlf 2:fwuo, 0:udda 1:dyyk 2:xk, 0:xnlw 1:djxuiciqs 2:ijibcbiati, 0:rbrkdy 1:a 2:evua, 0:yrgrygcn 1:tevxxhx 2:mhke, 0:uuhwdcjhm 1:hrvs 2:t, 0:cbleqeviv 1:gdrasc 2:gaorwbbun, 0:grucypbxx 1:cdivfbchv 2:kc]
