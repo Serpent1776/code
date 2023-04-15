@@ -65,13 +65,12 @@ public class ThreeNames implements Biggest, Comparable<ThreeNames> {
     public int compareTo(ThreeNames o) {
         int subtr = 0;
          for(int i = 0; i < 3; i++) {
-            if(!(list[i].equals(""))) {
             subtr = list[i].length() - o.list[i].length();
-            }
             if(subtr != 0) {
-                return subtr;
+            return subtr;
             }
-         }
+        }
+         
         return subtr;
     }
 }

@@ -3,6 +3,6 @@ Jack Hemling
 Homework M-1 
 This is from Notes M
 Example Output:
- [0:vf 1:oow 2:uoe, 0:iqkl 1:rlf 2:fwuo, 0:cbleqeviv 1:gdrasc 2:gaorwbbun, 0:yrgrygcn 1:tevxxhx 2:mhke, 0:udda 1:dyyk 2:xk, 0:df 1:lmduycr 2:jupgxj, 0:rbrkdy 1:a 2:evua, 0:grucypbxx 1:cdivfbchv 2:kc, 0:uuhwdcjhm 1:hrvs 2:t, 0:xnlw 1:djxuiciqs 2:ijibcbiati]
+ [0:sckjnkyfs 1:lm 2:ocq, 0:yf 1:skyxpqslvp 2:ylik, 0:---------- 1:ewutkt 2:ukjkcnjnxp, 0:djcqan 1:yiypo 2:jagw, 0:cxrtwnf 1:j 2:----------, 0:prvtoricev 1:tfvrobmjkn 2:nbch, 0:cfeibbowq 1:nay 2:bqfi, 0:---------- 1:---------- 2:mxd, 0:ijewvypij 1:jnr 2:mlani, 0:uqkdfqye 1:qfslrxaf 2:fmpq]
 
- [0:vf 1:oow 2:uoe, 0:df 1:lmduycr 2:jupgxj, 0:iqkl 1:rlf 2:fwuo, 0:udda 1:dyyk 2:xk, 0:xnlw 1:djxuiciqs 2:ijibcbiati, 0:rbrkdy 1:a 2:evua, 0:yrgrygcn 1:tevxxhx 2:mhke, 0:uuhwdcjhm 1:hrvs 2:t, 0:cbleqeviv 1:gdrasc 2:gaorwbbun, 0:grucypbxx 1:cdivfbchv 2:kc]
+ [0:---------- 1:---------- 2:mxd, 0:---------- 1:ewutkt 2:ukjkcnjnxp, 0:yf 1:skyxpqslvp 2:ylik, 0:djcqan 1:yiypo 2:jagw, 0:cxrtwnf 1:j 2:----------, 0:uqkdfqye 1:qfslrxaf 2:fmpq, 0:sckjnkyfs 1:lm 2:ocq, 0:cfeibbowq 1:nay 2:bqfi, 0:ijewvypij 1:jnr 2:mlani, 0:prvtoricev 1:tfvrobmjkn 2:nbch]
