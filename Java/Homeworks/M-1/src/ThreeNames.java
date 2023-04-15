@@ -1,6 +1,4 @@
-
-
-public class ThreeNames implements Biggest, Comparable<String> {
+public class ThreeNames implements Biggest, Comparable<ThreeNames> {
     
     private String[] list;
     private boolean[] occupied = { false, false, false };
@@ -8,6 +6,19 @@ public class ThreeNames implements Biggest, Comparable<String> {
     public ThreeNames() {
         this.list = new String[3];
         list[0] = list[1] = list[2] = "";
+    }
+    public ThreeNames(String one, String two, String three) {
+        this.list = new String[3];
+        this.list[0] = one;
+        this.list[1] = two;
+        this.list[2] = three;
+        for(int i = 0; i < this.list.length; i++) {
+            if(!(this.list[i].equals(""))) {
+            this.occupied[i] = true;
+            }
+        }
+
+        
     }
     public void assign(int pos, String name) {
         this.list[pos] = name;
@@ -33,17 +44,17 @@ public class ThreeNames implements Biggest, Comparable<String> {
     for (int i = 0; i < 3; i++) {
     out += i + ":";
     if (this.occupied[i])
-    out += String.format("%-10s ", this.list[i]) + " ";
+    out += this.list[i] + " ";
     else
-    out += String.format("%-10s ", "----------") + " ";
+    out += "----------" + " ";
     }
     return out;
     }
-    public int compareTo(String o) {
+    public int compareTo(ThreeNames o) {
         int subtr = 0;
          for(int i = 0; i < 3; i++) {
             if(!(list[i].equals(""))) {
-            subtr = list[i].length() - o.length();
+            subtr = list[i].length() - o.list[i].length();
             }
             if(subtr != 0) {
                 return subtr;
