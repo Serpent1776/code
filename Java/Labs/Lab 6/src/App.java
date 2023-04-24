@@ -7,28 +7,36 @@ public class App {
         TheDice crapsDice = new Dice(2, 6);
         System.out.println("okay, today you will be playing craps.");
         boolean on = true;
+        boolean firstTime = true;
+        String theBet = "";
             while(on) {
+            if(!firstTime && (end(aScanner, crapsPlayer) || crapsPlayer.getChips() == 0)) {
+                    on = false;
+            }
             System.out.println(crapsPlayer);
-            System.out.println(getBet(aScanner, crapsPlayer));
-            System.out.println(evalBet(crapsPlayer, crapsDice, "", 0, false, 0));
-            if(crapsPlayer.getChips() == 0 || end(aScanner, crapsPlayer)) {
+            theBet = getBet(aScanner, crapsPlayer);
+            if(theBet.equals("Scanner skip bug")) {
                 on = false;
+                break;
+            } else {
+                System.out.println(theBet);
+            }
+            System.out.println(evalBet(crapsPlayer, crapsDice, "", 0, false, 0));
+            if(firstTime == true) {
+            firstTime = false;
             }
         }
     }
     public static boolean end(Scanner scan, Player play) {
-        System.out.println("want to continue? (say no to end)");
+        System.out.println("Do you want to continue? (reply needs to start with no to end)");
         String decision = scan.next().toLowerCase();
-        if(decision.equals("no")) {
-           return true;
-        } else {
-           return false;
-        }
+        return decision.contains("no");
 
     }
     public static String getBet(Scanner scan, Player play) {
-        System.out.println("Your bet? (1-4 only)");
         int bet = 0;
+        try {
+        System.out.println("Your bet? (put a number between 1 and 4 only)");
         bet = scan.nextInt();
         play.setCurrentBet(bet*5);
         if(bet > 0 && bet < 5 && play.getCurrentBet() != -1) {
@@ -36,6 +44,10 @@ public class App {
         } else {
         return getBet(scan, play);
         }
+    } catch(Exception e) {
+        System.out.println("ending program...");
+        return "Scanner skip bug";
+    }
     }
     public static String evalBet(Player play, TheDice twoD6, String sumString, int point, boolean pointCheck, int iter) {
     if(iter == 0) {
