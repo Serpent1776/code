@@ -9,9 +9,9 @@ public class Test {
         Card[] deck = new Card[cardRange];
         for(int i = 0; i < deck.length; i++) {
             System.out.println("card " + i + " suit: ");
-            String cardc = input.nextLine();
+            String cardc = input.next();
             System.out.println("value " + i + " suit: ");
-            String cardsu = input.nextLine();
+            String cardsu = input.next();
             deck[i] = new Card(cardc, cardsu);
         }
         

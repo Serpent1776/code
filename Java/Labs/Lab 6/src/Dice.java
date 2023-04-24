@@ -22,7 +22,8 @@ public class Dice extends Die {
        sum += comeOut;
        sumString += "(" + (comeOut) + ")";
      }
-     return sumString + " (" + sum + ")";
+     currentRoll = sum;
+     return sumString + " =  (" + currentRoll + ")";
     } else if(amount == 1) {return super.roll();}
     return "(-1)";
    }
@@ -34,16 +35,5 @@ public class Dice extends Die {
       return super.toString();
     }
     return "this die is null";
-  }
-  @Override
-  public int value() {
-    if(amount > 1) {
-     int sum = 0;
-    for(int i = 0; i < amount; i++) {
-      sum += (int)(Math.random()*(sides)) + 1;
-    } 
-    return sum;
-  } else if(amount == 1) {return super.value();}
-     return -1;
   }
 }

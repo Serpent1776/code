@@ -6,17 +6,20 @@
  */  
 public class Die implements TheDice {
     protected int sides;
+    protected int currentRoll;
 
     public Die(int sides) {
       this.sides = sides;
+      currentRoll = 0;
     }
     public String roll() {
-        return "(" + ((int)(Math.random()*(sides)) + 1) + ")";
+      currentRoll = ((int)(Math.random()*(sides)) + 1);
+        return "(" + currentRoll + ")";
     }
     public String toString() {
       return "this is a d" + sides;
     }
     public int value() {
-      return ((int)(Math.random()*(sides)) + 1);
+      return currentRoll;
     }
 }
