@@ -4,7 +4,7 @@
  * Lab 8
  * This is my own work
  */  
-public class Dice extends Die implements TheDice {
+public class Dice extends Die {
     protected int amount;
 
    public Dice(int amount, int sides) {
