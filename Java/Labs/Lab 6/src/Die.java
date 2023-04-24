@@ -4,7 +4,7 @@
  * Lab 8
  * This is my own work
  */  
-public class Die {
+public class Die implements TheDice {
     protected int sides;
 
     public Die(int sides) {
