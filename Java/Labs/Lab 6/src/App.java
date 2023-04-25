@@ -10,8 +10,9 @@ public class App {
         boolean firstTime = true;
         String theBet = "";
             while(on) {
-            if(!firstTime && (end(aScanner, crapsPlayer) || crapsPlayer.getChips() == 0)) {
+            if(!firstTime && (crapsPlayer.getChips() == 0 || end(aScanner, crapsPlayer))) {
                     on = false;
+                    if(crapsPlayer.getChips() == 0) {System.out.print("you can't play anymore, GET OUT!!!");}
                     break;
             }
             System.out.println(crapsPlayer);
@@ -29,25 +30,27 @@ public class App {
         }
     }
     public static boolean end(Scanner scan, Player play) {
-        System.out.println("Do you want to continue? (reply should start with no to end)");
+        System.out.println("Do you want to continue? (reply needs to start with no to end)");
         String decision = scan.next().toLowerCase();
         return decision.contains("no");
     }
     public static String getBet(Scanner scan, Player play) {
         int bet = 0;
-        try {
+        //try {
         System.out.println("Your bet? (put a number between 1 and 4 only)");
-        bet = scan.nextInt();
+        String b = (scan.nextLine());
+        //try {
+        if(b.length() == 1) {
+            bet = Integer.parseInt(b);
+        } else {
+          return getBet(scan, play);
+        }
         play.setCurrentBet(bet*5);
         if(bet > 0 && bet < 5 && play.getCurrentBet() != -1) {
         return "Pass line bet is " + bet*5;
         } else {
         return getBet(scan, play);
         }
-    } catch(Exception e) {
-        System.out.println("ending program...");
-        return "Scanner skip bug";
-    }
     }
     public static String evalBet(Player play, TheDice twoD6, String sumString, int point, boolean pointCheck, int iter) {
     if(iter == 0) {
@@ -75,6 +78,7 @@ public class App {
             play.bid(true);
             return sumString;
         }   
+        pointCheck = false;
     }
         point = twoD6.value();
         iter++;
