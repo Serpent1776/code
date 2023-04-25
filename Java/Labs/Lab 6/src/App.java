@@ -12,6 +12,7 @@ public class App {
             while(on) {
             if(!firstTime && (end(aScanner, crapsPlayer) || crapsPlayer.getChips() == 0)) {
                     on = false;
+                    break;
             }
             System.out.println(crapsPlayer);
             theBet = getBet(aScanner, crapsPlayer);
@@ -28,10 +29,9 @@ public class App {
         }
     }
     public static boolean end(Scanner scan, Player play) {
-        System.out.println("Do you want to continue? (reply needs to start with no to end)");
+        System.out.println("Do you want to continue? (reply should start with no to end)");
         String decision = scan.next().toLowerCase();
         return decision.contains("no");
-
     }
     public static String getBet(Scanner scan, Player play) {
         int bet = 0;
