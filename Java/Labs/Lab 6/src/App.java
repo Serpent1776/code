@@ -32,7 +32,7 @@ public class App {
         }
     }
     public static boolean end(Scanner scan, Player play) {
-        System.out.println("Do you want to continue? (reply needs to contain no to end)");
+        System.out.println("Do you want to continue? (reply needs to contain no to exit)");
         String decision = scan.nextLine().toLowerCase();
         return decision.contains("no");
     }
