@@ -42,6 +42,7 @@ public class App {
         if(play.getCurrentBet() != -1) {
         return "Pass line bet is " + theBet;
         } else {
+        System.out.println("\nYou didn't have enough chips to bet: " + theBet + " chips\nSo, we decided to redo the bet!");
         return getBet(scan, play);
         }
     }
