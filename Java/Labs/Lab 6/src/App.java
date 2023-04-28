@@ -23,7 +23,7 @@ public class App {
             } else {
                 System.out.println(theBet);
             }
-            System.out.println(evalBet(crapsPlayer, crapsDice, "", 0, false, 0));
+            System.out.println(evalBet(crapsPlayer, crapsDice, 0, false, 0));
             if(firstTime == true) {
             firstTime = false;
             }
@@ -38,9 +38,9 @@ public class App {
         int bet = 0;
         //try {
         System.out.println("Your bet? (put a number between 1 and 4 only)");
-        String b = (scan.nextLine());
+        String b = (scan.next());
         //try {
-        if(b.length() == 1) {
+        if(b.length() == 1 && Character.getNumericValue(b.charAt(0)) < 10) {
             bet = Integer.parseInt(b);
         } else {
           return getBet(scan, play);
@@ -52,37 +52,34 @@ public class App {
         return getBet(scan, play);
         }
     }
-    public static String evalBet(Player play, TheDice twoD6, String sumString, int point, boolean pointCheck, int iter) {
-    if(iter == 0) {
-        sumString = "Come out roll is " + twoD6.roll();
+    public static String evalBet(Player play, TheDice twoD6, int point, boolean pointCheck, int iter) {
+     
+        System.out.println("\nCome out roll is " + twoD6.roll());
+        if(iter == 0) {
+        
         if(twoD6.value() == 7 || twoD6.value() == 11) {
-            sumString += "\nPass line bet wins " + play.getCurrentBet();
             play.bid(true);
-            return sumString;
+            return "\nPass line bet wins " + play.getCurrentBet();
         }
-    } else {
-        sumString += "\nCome out roll is " + twoD6.roll();
-    }
+    } 
     
      if(twoD6.value() == 2 || twoD6.value() == 3 || twoD6.value() == 12) {
-        sumString += "\nPass line bet loses " + play.getCurrentBet();
         play.bid(false);
-        return sumString;
+        return "\nPass line bet loses " + play.getCurrentBet();
      } else if(twoD6.value() == point) {
         pointCheck = true;
         iter++;
-        return sumString + "\n" + evalBet(play, twoD6, sumString, point, pointCheck, iter);
+        return evalBet(play, twoD6, point, pointCheck, iter);
     } else if (pointCheck) {
         if(twoD6.value() == 7) {
-            sumString += "\n Pass line bet wins " + play.getCurrentBet();
             play.bid(true);
-            return sumString;
+            return "\nPass line bet wins " + play.getCurrentBet();
         }   
         pointCheck = false;
     }
         point = twoD6.value();
         iter++;
-        return sumString + "\n" + evalBet(play, twoD6, sumString, point, pointCheck, iter);
+        return evalBet(play, twoD6, point, pointCheck, iter);
     }
 }    
 
