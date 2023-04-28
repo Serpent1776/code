@@ -5,8 +5,8 @@
  * This is my own work
  */  
 public class Die implements TheDice {
-    protected int sides;
-    protected int currentRoll;
+    private int sides;
+    private int currentRoll;
 
     public Die(int sides) {
       this.sides = sides;
@@ -18,6 +18,9 @@ public class Die implements TheDice {
     }
     public String toString() {
       return "this is a d" + sides;
+    }
+    public int getSides() {
+        return sides;
     }
     public int value() {
       return currentRoll;

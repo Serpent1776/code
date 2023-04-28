@@ -4,33 +4,34 @@
  * Lab 8
  * This is my own work
  */  
-public class Dice extends Die {
-    protected int amount;
-
+public class Dice implements TheDice {
+    private int amount;
+    private Die ds;
+    private int diceSum;
+    
    public Dice(int amount, int sides) {
-        super(sides);
-        this.amount = amount;
+       this.amount = amount;
+       this.ds = new Die(sides);
+       this.diceSum = 0;
    }
-   @Override
    public String roll() {
-    int sum = 0;
-    String sumString = "";
-    int comeOut = 0;
-    if(amount > 1) {
-     for(int i = 0; i < amount; i++) {
-       comeOut = (int)(Math.random()*(sides)) + 1;
-       sum += comeOut;
-       sumString += "(" + (comeOut) + ")";
-     }
-     currentRoll = sum;
-     return sumString + " =  (" + currentRoll + ")";
-    } else if(amount == 1) {return super.roll();}
-    return "(-1)";
+    diceSum = 0;
+    String stringSum = "";
+    for(int i = 0; i < amount; i++) {
+      stringSum += "" + ds.roll();
+      diceSum += ds.value();
+    }
+     stringSum += " = (" + diceSum + ")";
+    return stringSum;
+
    }
+   public int value() {
+    return diceSum;
+  }
    @Override
    public String toString() {
     if(amount > 1) {
-    return "this is " + amount + "d" + sides;
+    return "this is " + amount + "d" + ds.getSides();
     } else if(amount == 1) {
       return super.toString();
     }
