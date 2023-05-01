@@ -19,10 +19,10 @@ class Card {
         this.cvalue = cvalue;
     }
     public boolean equalSuit(Card other) {
-       return this.csuit == other.getCsuit();
+       return this.csuit.equals(other.getCsuit());
     }
     public boolean equalValue(Card other) {
-        return this.cvalue == other.getCvalue();
+        return this.cvalue.equals(other.getCvalue());
      }
      public boolean equals(Card other) {
         return equalSuit(other) && equalValue(other);

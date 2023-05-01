@@ -6,78 +6,84 @@ public class App {
         Player crapsPlayer = new Player(aScanner.nextLine());
         TheDice crapsDice = new Dice(2, 6);
         System.out.println("okay, today you will be playing craps.");
-        boolean on = true;
-        boolean firstTime = true;
+        boolean playing = true;
+        boolean firstCycle = true;
         String theBet = "";
-            while(on) {
-            if(!firstTime && (crapsPlayer.getChips() == 0 || end(aScanner, crapsPlayer))) {
-                    on = false;
-                    if(crapsPlayer.getChips() == 0) {System.out.println("you can't play anymore, GET OUT!!!");}
-                    else{System.out.println("Have an amazing day, come back soon to play more craps!");}
-                    
-                    break;
+        while(playing) {
+            if(!firstCycle && (crapsPlayer.getChips() == 0 || end(aScanner, crapsPlayer))) {
+                playing = false;
+                if(crapsPlayer.getChips() == 0) {System.out.println("You cannot play anymore, leave now!");}
+                else{System.out.println("Have an amazing day, come back soon to play more craps!");} 
+                break;
             }
             System.out.println(crapsPlayer);
             theBet = getBet(aScanner, crapsPlayer);
-            if(theBet.equals("Scanner skip bug")) {
-                on = false;
-                break;
-            } else {
-                System.out.println(theBet);
-            }
-            System.out.println(evalBet(crapsPlayer, crapsDice, 0, false, true));
-            if(firstTime == true) {
-            firstTime = false;
+            System.out.println(theBet);
+            System.out.println(evalBet(crapsPlayer, crapsDice, 0, true));
+            if(firstCycle) {
+                firstCycle = false;
             }
         }
+        aScanner.close();
     }
     public static boolean end(Scanner scan, Player play) {
         System.out.println("Do you want to continue? (reply needs to contain no to exit)");
         String decision = scan.nextLine().toLowerCase();
+        //scan.nextLine();
         return decision.contains("no");
     }
+    //after reading after a number, use .nextLine() to eat the \n
     public static String getBet(Scanner scan, Player play) {
-        int theBet = ((int)(Math.random()*3) + (int)((Math.random()*5)/2.0))*5;
-        play.setCurrentBet(theBet);
-        if(play.getCurrentBet() != -1) {
-        return "Pass line bet is " + theBet;
-        } else {
-        System.out.println("\nYou didn't have enough chips to bet: " + theBet + " chips\nSo, we decided to redo the bet!");
+        try {
+            
+        
+            System.out.print("What is your bet (5, 10, 15, 20)? ");
+            int theBet = scan.nextInt();
+            scan.nextLine();
+            if(theBet == 5 || theBet == 10 || theBet == 15 || theBet == 20) {
+                play.setCurrentBet(theBet);
+            } else {return getBet(scan, play);}
+            if(play.getCurrentBet() != -1) {
+                return "Pass line bet is " + theBet;
+            } else {
+                System.out.println("\nYou didn't have enough chips to bet: " + theBet + " chips");
+                System.out.println("So, we decided to redo the bet!");
+                return getBet(scan, play);
+            }
+        } catch (Exception e) {
+        scan.nextLine();
         return getBet(scan, play);
         }
     }
-    public static String evalBet(Player play, TheDice twoD6, int point, boolean pointCheck, boolean firstCycle) {
+    public static String evalBet(Player play, TheDice shooter, int point, boolean firstPhase) {
      
-        System.out.println("\nCome out roll is " + twoD6.roll());
-        if(firstCycle) {
+        System.out.println("\nCome out roll is " + shooter.roll());
+        if(firstPhase) {
         
-        if(twoD6.value() == 7 || twoD6.value() == 11) {
+        if(shooter.value() == 7 || shooter.value() == 11) {
             play.bid(true);
             return "\nPass line bet wins " + play.getCurrentBet();
         }
-    } 
-    
-     if(twoD6.value() == 2 || twoD6.value() == 3 || twoD6.value() == 12) {
-        play.bid(false);
-        return "\nPass line bet loses " + play.getCurrentBet();
-     } else if(twoD6.value() == point) {
-        pointCheck = true;
-        if(firstCycle) {
-        firstCycle = false;
+        if(shooter.value() == 2 || shooter.value() == 3 || shooter.value() == 12) {
+            play.bid(false);
+            if(shooter.value() == 12) {System.out.println("Craps!!!");}
+            return "\nPass line bet loses " + play.getCurrentBet();
         }
-        return evalBet(play, twoD6, point, pointCheck, firstCycle);
-    } else if (pointCheck) {
-        if(twoD6.value() == 7) {
-            play.bid(true);
-            return "\nPass line bet wins " + play.getCurrentBet();
-        }   
-        pointCheck = false;
+        firstPhase = false;
+        point = shooter.value();
+        System.out.print("The point is " + point);
+        return evalBet(play, shooter, point, firstPhase);
     }
-        point = twoD6.value();
-        if(firstCycle) {
-            firstCycle = false;
-            }
-        return evalBet(play, twoD6, point, pointCheck, firstCycle);
+    
+    
+        if(shooter.value() == point) {
+            play.bid(true);
+            return "\nPass line bet wins " + play.getCurrentBet();
+        } else if(shooter.value() == 7) {
+            play.bid(false);
+            return "\nPass line bet loses " + play.getCurrentBet();
+        }
+        return evalBet(play, shooter, point, firstPhase);
     }
 }    
 

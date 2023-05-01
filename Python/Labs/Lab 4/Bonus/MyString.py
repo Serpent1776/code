@@ -13,3 +13,5 @@ class MyString(Middle):
     #@pytypes.typechecked
     def middle(self)-> Tuple[str,int]:
         length:int = len(self.__s)
+        
+        return self.__s, length
