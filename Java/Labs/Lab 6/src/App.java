@@ -10,7 +10,7 @@ public class App {
         boolean firstCycle = true;
         String theBet = "";
         while(playing) {
-            if(!firstCycle && (crapsPlayer.getChips() == 0 || end(aScanner, crapsPlayer))) {
+            if(!firstCycle && (crapsPlayer.getChips() == 0 || end(aScanner))) {
                 playing = false;
                 if(crapsPlayer.getChips() == 0) {System.out.println("You cannot play anymore, leave now!");}
                 else{System.out.println("Have an amazing day, come back soon to play more craps!");} 
@@ -26,7 +26,7 @@ public class App {
         }
         aScanner.close();
     }
-    public static boolean end(Scanner scan, Player play) {
+    public static boolean end(Scanner scan) {
         System.out.println("Do you want to continue? (reply needs to contain no to exit)");
         String decision = scan.nextLine().toLowerCase();
         //scan.nextLine();
