@@ -32,7 +32,6 @@ public class App {
         //scan.nextLine();
         return decision.contains("no");
     }
-    //after reading after a number, use .nextLine() to eat the \n
     public static String getBet(Scanner scan, Player play) {
         try {
             
